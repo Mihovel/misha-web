@@ -11,15 +11,14 @@
     <script type="text/javascript" async
             src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         "HTML-CSS": { scale: 200, linebreaks: { automatic: false } },
         SVG: { linebreaks: { automatic:false } },
         displayAlign: "left" });
 
-
     </script>
-
 
 
 </head>
@@ -49,7 +48,7 @@
        onchange="if ($(this).val().indexOf('.') !== -1) $(this).next().text('Предупреждаем, что для записи десятичных дробей используется запятая, а не точка.')0; else $(this).next().text('');">
 
 <p>
-    <button id = "1">
+    <button id="1">
         Ответ
     </button>
 </p>
@@ -61,11 +60,22 @@
 
 <script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
 </body>
+<script type="text/javascript" th:src="@{webjars/bootstrap/4.
 
 <script>
 
 $("#1").click(function(){
-alert('clicked');
+
+ var inputVal = $("#answer1") {
+    if (inputVal.value == "-36") {
+        inputVal.style.backgroundColor = "yellow";
+    }
+    else{
+        inputVal.style.backgroundColor = "";
+    }
+};
+
+
 })
     </script>
 
